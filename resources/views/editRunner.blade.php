@@ -20,11 +20,9 @@
     </div>
     <div class="form-section">
         <h3 class="form-title">Edit Runner Registration</h3>
-
         @if(session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
         @endif
-
         <form action="/registrations/{{ $runner->id }}/update" method="POST">
             @csrf
             <div class="row">

@@ -36,12 +36,10 @@
         </div>
     @endif
     <form action="/register-runner" method="POST">
-
         @csrf
         <div class="row">
             <div class="col-md-6 mb-4">
                 <label>Full Name</label>
-
                 <input type="text"
                        name="fullname"
                        class="form-control"
@@ -50,7 +48,6 @@
             </div>
             <div class="col-md-6 mb-4">
                 <label>Age</label>
-
                 <input type="number"
                        name="age"
                        class="form-control"
@@ -59,20 +56,16 @@
             </div>
             <div class="col-md-6 mb-4">
                 <label>Gender</label>
-
                 <select name="gender"
                         class="form-select"
                         required>
-
                     <option value="">Select Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
-
                 </select>
             </div>
             <div class="col-md-6 mb-4">
                 <label>Category</label>
-
                 <select name="category"
                         class="form-select"
                         required>
@@ -144,11 +137,8 @@
 
             <i class="bi bi-check-circle"></i>
             Register Runner
-
         </button>
-
     </form>
-
 </div>
 
     </div>

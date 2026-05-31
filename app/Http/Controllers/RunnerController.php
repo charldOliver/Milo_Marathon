@@ -18,7 +18,6 @@ class RunnerController extends Controller
         'emergency_contact' => 'required',
         'shirt_size' => 'required|in:XS,S,M,L,XL,XXL'
     ]);
-
     Runner::create([
         'full_name' => $request->fullname,
         'age' => $request->age,
@@ -31,7 +30,6 @@ class RunnerController extends Controller
         'emergency_contact' => $request->emergency_contact,
         'shirt_size' => $request->shirt_size
     ]);
-
     return redirect()->back()->with('success', 'Runner Registered Successfully!');
 }
   // SHOW EDIT FORM
@@ -40,7 +38,6 @@ class RunnerController extends Controller
         $runner = Runner::findOrFail($id);
         return view('editRunner', compact('runner'));
     }
-
     // SAVE UPDATED RUNNER
     public function update(Request $request, $id)
     {
@@ -68,8 +65,6 @@ class RunnerController extends Controller
         $runner->save();
         return redirect('/allRunners')->with('success', 'Runner updated successfully!');
     }
-
-
     // DISPLAY RUNNERS
 public function index(Request $request)
 {
